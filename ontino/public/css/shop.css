@@ -1,0 +1,85 @@
+.wrapper{
+    padding: 0 10%;
+}
+.list{
+    display: flex;
+    padding: 0 15%;
+    justify-content: space-evenly;
+    margin: 50px 0;
+}
+.list a{
+    color: #252627;
+    font-size: 30px;
+}
+.list a:hover{
+    color: #FFA400;
+}
+.active_list{
+    color: #FFA400 !important;
+}
+.selector{
+    height: 50px;
+    border-radius: 10px;
+    border: #252627 1px solid;
+    color: #252627;
+    font-size: 20px;
+    padding-left: 10px;
+    outline: none;
+    width: 20%;
+    margin-bottom: 25px;
+}
+.selector option{
+    color: #252627;
+}
+.list_items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.item img{
+    width: 100%;
+}
+.item h2{
+    font-size: 20px;
+    color: #252627;
+    margin-top: 10px;
+    font-weight: normal;
+}
+.item .line{
+    width: 100%;
+    height: 2px;
+    background-color: #C0C0C0;
+    margin: 15px 0;
+}
+.item span{
+    font-family: "Maven Pro";
+    font-size: 20px;
+    color: #FFA400;
+}
+
+
+
+
+@media (max-width: 850px){
+    .wrapper{
+        padding: 0 5%;
+    }
+    .list{
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .selector{
+        width: 40%;
+    }
+    .list_items{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 500px){
+    .selector{
+        width: 70%;
+    }
+}

@@ -1,0 +1,92 @@
+.contacts{
+    padding: 80px 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.links h2{
+    color: #252627;
+    font-family: "Caveat";
+    font-size: 48px;
+    font-weight: normal;
+}
+.links a{
+    color: #FFA400;
+    font-size: 30px;
+    display: inline-block;
+    font-weight: normal;
+    margin-top: 15px;
+    font-family: "Maven Pro";
+}
+.links a:hover::after{
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #FFA400;
+}
+.phoneHead{
+    margin-top: 15px;
+}
+.form_contact label{
+    color: #252627;
+    font-size: 30px;
+    display: block;
+    margin-top: 18px;
+}
+.form_contact input, textarea{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border:#252627 solid 1px;
+    outline: none;
+    color: #252627;
+    padding: 0 10px;
+    font-size: 20px;
+    resize: vertical;
+}
+.form_contact input[type=submit]{
+    color: #FAFAFF;
+    width: 50%;
+    height: 45px;
+    background-color: #FFA400;
+    border: none;
+    margin-top: 10px;
+}
+.form_contact input[type=submit]:hover{
+    cursor: pointer;
+    background-color: rgba(255, 164, 0, 0.7);
+}
+textarea{
+    height: 100px;
+}
+.map{
+    height: 500px;
+    padding: 0 10%;
+    margin-bottom: 100px;
+}
+.map iframe{
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+
+
+@media (max-width: 850px){
+    .contacts{
+        grid-template-columns: 1fr;
+    }
+    .message{
+        margin-top: 50px;
+    }
+    .map{
+        height: 400px;
+    }
+}
+@media (max-width: 500px){
+    .contacts{
+        padding: 80px 7%;
+    }
+    .map{
+        height: 250px;
+        padding: 0;
+    }
+}

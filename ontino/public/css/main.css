@@ -1,0 +1,184 @@
+/* Первый экран */
+.firstScreen{
+    height: 80vh;
+    background-image: url("../img/meat.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.firstScreen h1{
+    font-family: "Righteous";
+    font-size: 64px;
+    font-weight: normal;
+    display: inline;
+}
+.firstScreen h1::after{
+    content: '';
+    display: block;
+    height: 9px;
+    background-color: #FAFAFF;
+}
+.firstScreen p{
+    font-size: 30px;
+    margin-top: 30px;
+}
+/* Основной блок */
+.wrapper{
+    margin: 100px 0;
+    padding: 0 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 50px;
+    text-align: center;
+}
+.wrapper div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper h2{
+    color: #252627;
+    font-family: "Caveat";
+    font-size: 64px;
+    font-weight: normal;
+}
+.wrapper p{
+    color: #252627;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 20px 0 15px 0;
+}
+.wrapper a{
+    color: #FFA400;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.wrapper a::after{
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #FFA400;
+}
+.wrapper img{
+    width: 100%;
+}
+.h2Iterer{
+    display: block;
+    padding: 0 10%;
+    text-align: center;
+    color: #252627;
+    font-weight: normal;
+    font-family: "Caveat";
+    font-size: 64px;
+    margin-bottom: 15px;
+}
+
+
+
+
+/* Slider */
+/* стили основного контейнера слайдера */
+.slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+  }
+
+  /* стили для обёртки, в которой заключены слайды */
+  .slider__wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* стили для контейнера слайдов */
+  .slider__items {
+    display: flex;
+    transition: transform 0.6s ease;
+  }
+
+  /* стили для слайдов */
+  .slider__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  /* стили для индикаторов */
+  .slider__indicators {
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .slider__indicators li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px #252627 solid;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+  }
+
+  .slider__indicators li.active {
+    background-color: #A4031F;
+  }
+
+  /* для стилизации текущего слайдера */
+  .img-fluid {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 850px){
+    .firstScreen h1{
+        font-size: 60px;
+    }
+    .firstScreen p{
+        font-size: 24px;
+    }
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+    .wrapper div:nth-child(2),
+    .wrapper div:nth-child(3),
+    .wrapper div:nth-child(6){
+        display: none !important;
+    }
+
+    .slider{
+        max-width: 100%;
+    }
+}

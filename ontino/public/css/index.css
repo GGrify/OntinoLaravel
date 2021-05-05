@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    color: #FAFAFF;
+    text-decoration: none;
+}
+
+/* Меню */
+header{
+    background-color: #A4031F;
+    height: 80px;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    text-decoration: none;
+}
+.logo a {
+    font-family: "Righteous";
+    font-size: 40px;
+}
+.logo a::after{
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #FAFAFF;
+}
+menu{
+    flex-grow: 0.3;
+    display: flex;
+    justify-content: space-evenly;
+}
+.active_page::after,
+.menu_li:hover::after{
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #FAFAFF;
+}
+.headIcons{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 0.06;
+}
+/* Верхний блок */
+.upper_block{
+    display: flex;
+    flex-direction: column;
+    padding: 45px 10%;
+    align-items: center;
+    background-image: url("../img/upper_block_bg.png");
+}
+.upper_block h1{
+    color: #FFA400;
+    font-family: Caveat;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: normal;
+}
+.upper_block svg{
+    padding: 10px 0 15px 0;
+}
+.upper_block p{
+    color: #252627;
+    font-size: 30px;
+}
+/* Футер */
+footer{
+    background-color: #A4031F;
+    padding: 25px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+footer p{
+    margin: 10px 0;
+    line-height: 25px;
+    font-size: 18px;
+}
+.visitUs a{
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 18px;
+}
+.opentime p {
+    text-align: center;
+}
+.WithUs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.WithUs a {
+    display: block;
+    margin-top: 13px;
+}
+.menu_button{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    top: 13px;
+    left: 25px;
+}
+.menu_button div{
+    height: 5px;
+    width: 100%;
+    background-color: #FAFAFF;
+}
+
+
+
+@media (max-width: 850px){
+    .menu_button{
+        display: flex;
+    }
+    header{
+        flex-direction: column;
+        height: 50px;
+        justify-content: space-between;
+        padding: 10px 0 20px 0;
+    }
+    menu{
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+    .headIcons{
+        display: none;
+    }
+    .icon{
+        margin: 0 15px;
+    }
+    .upper_block{
+        text-align: center;
+    }
+    .upper_block p{
+        font-size: 24px;
+    }
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    .opentime{
+        margin: 40px 0;
+    }
+}
+@media (max-width: 500px){
+    .upper_block{
+        padding: 45px 4%;
+    }
+    .upper_block h1{
+        font-size: 55px;
+    }
+}
