@@ -1,2 +1,1 @@
-# OntinoLaravel
- Site Ontino on Laravel
+6. Моделі та робота з БД в Laravel 
